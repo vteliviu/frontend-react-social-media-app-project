@@ -1,0 +1,136 @@
+@import 'normalize.css';
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+
+.auth {
+    display: block;
+ position: relative;
+right: 5rem;
+  margin: auto;
+  width: 95%;
+  max-width: 25rem;
+  height: auto;
+  border-radius: 50px;
+  border-color: $globalRoyalBlue;
+  box-shadow: 0px 20px 20px 0px rgba (0,0,0,0.5);
+  border: 2px solid rgba(32, 82, 233, 0.18);
+  padding: 4rem;
+  text-align: center;
+  color: royalblue;
+  background: rgba(255,255,255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: 15px;
+  letter-spacing: 5px;
+  line-height: 1.5rem;
+  margin-right: 15rem;
+  top: 18rem;
+.action {
+
+    padding: 2rem;
+}
+  form {
+      .control {
+          margin-bottom: 1.5rem;
+          label {
+              display: block;
+              font-weight: bold;
+              margin-bottom: 0.2rem;
+              color: royalblue;
+          }
+
+          input {
+              background-color: rgb(247, 249, 255);
+              border-radius: 5px;
+              color: royalblue;
+              border: 1px solid royalblue;
+              width: 100%;
+              text-align: left;
+              padding: 0.25rem;
+          }
+      }
+
+      .actions {
+          margin-top: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          button {
+              cursor: pointer;
+              color: white;
+              background-color: royalblue;
+              border: 1px solid white;
+              border-radius: 50px;
+              padding: 0.5rem 2.5rem;
+              top: 2.5rem;
+
+              &:hover {
+                  background-color: lightblue;
+                  border: lightblue;
+              }
+          }
+
+          .toggle {
+              margin-top: 1rem;
+              background-color: transparent;
+              color: royalblue;
+              border: none;
+              padding: 0.15rem 1.5rem;
+          }
+      }
+
+  }
+}
+@media (max-width: 560px) {
+    .auth {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        height: auto;
+        align-self: center;
+        overflow: auto;
+        margin-left: 120px;
+        margin-top: 40px;
+
+        form {
+            max-width: 100%;
+            margin-bottom: 15px;
+            left: 20px;
+            align-self: center;
+        }
+    }
+    .actions {
+        width: 100%;
+        margin-left: auto;
+        overflow: auto;
+        min-height: 20px;
+    }
+
+  }
+  @media (max-width: 800px) {
+    .auth {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        height: auto;
+        align-self: center;
+        overflow: auto;
+        margin-left: 120px;
+        margin-top: 30px;
+
+        form {
+            max-width: 100%;
+            margin-bottom: 16px;
+            left: 20px;
+            align-self: center;
+        }
+    }
+    .actions {
+        width: 100%;
+        margin-left: auto;
+        overflow: auto;
+        min-height: 20px;
+    }
+
+  }

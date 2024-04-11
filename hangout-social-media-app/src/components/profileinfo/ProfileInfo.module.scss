@@ -1,0 +1,53 @@
+.profileTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-direction: column;
+}
+.profileInfo {
+  margin-bottom: 40px;
+
+  .profileInfoItem {
+    margin-bottom: 10px;
+    .profileInfoKey {
+      font-weight: 500;
+      margin-right: 15px;
+      color: #555;
+    }
+    .profileInfoValue {
+      font-weight: 100;
+    }
+  }
+}
+.followings {
+  display: flex;
+
+  flex-wrap: wrap;
+  object-fit: cover;
+
+  .following {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+    object-fit: cover;
+    cursor: pointer;
+
+
+    .followingImg {
+      width: 80%;
+      height: 70%;
+      object-fit: cover;
+      border-radius: 10%;
+      align-items: center;
+
+    }
+    .followingName {
+      text-align: center;
+      justify-content: center;
+
+    }
+  }
+}
+

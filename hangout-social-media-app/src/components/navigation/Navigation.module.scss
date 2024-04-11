@@ -1,0 +1,141 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import '../../scss/variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  ul {
+    list-style: none;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: $globalLightBlack;
+    font-size: 18px;
+  }
+
+  /* navbar */
+  .navigation {
+    // padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    min-height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 3px solid black;
+    z-index: 1;
+
+    .logoImageNav {
+      color: red;
+      background-color: red;
+
+    }
+    /* logo icon */
+  .logoImage {
+    position: relative;
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 10px;
+    align-items: center;
+    border-radius: 50%;
+    background-color: red;
+    &:hover {
+        opacity: 0.8;
+    }
+  }
+  }
+  .navlink {
+
+    &:hover {
+        color: $globalLightGrey;
+
+    }
+  }
+
+  /* logo  */
+  .logo {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $globalRoyalBlue;
+
+
+    cursor: pointer;
+    &:hover {
+        color: $globalDarkBlue;
+
+    }
+  }
+
+
+  /* ul  */
+  .navMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    justify-content: right;
+    align-self: right;
+  }
+
+  /* media queries */
+
+  @media screen and (max-width: 780px){
+
+    /* menuItem */
+    .menuItem {
+      display: block;
+      cursor: pointer;
+    }
+
+    .bar {
+          background-color: #120f0b;
+          width: 20px;
+          height: 3px;
+          display: block;
+          margin: 5px;
+          -webkit-transition: 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+      }
+
+    /* adding active class to the bars  */
+    .menuItem.active .bar:nth-child(2){
+      opacity: 0;
+    }
+    .menuItem.active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+    }
+    .menuItem.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* navMenu */
+    .navMenu{
+      position: absolute;
+      flex-direction: column;
+      gap: 0;
+      top: 70px;
+      left: -100%;
+      text-align: start;
+      width: 100%;
+      transition: 0.7s ease-in-out;
+      background-color: aliceblue;
+      padding: 10px;
+    }
+
+    .navMenu.active{
+      left: 0;
+    }
+
+    .navMenu li {
+      margin: 16px 0;
+    }
+  }

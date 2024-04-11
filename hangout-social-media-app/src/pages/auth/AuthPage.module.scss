@@ -1,0 +1,119 @@
+@import 'normalize.css';
+@import '../../scss/variables';
+
+.mainContainer {
+  position: absolute;
+  display: block;
+  top: 40rem;
+  justify-content: space-around;
+  text-align: center;
+  flex-direction: column;
+  height: 20rem;
+  .top {
+    padding: 2px;
+  }
+  .brandLogo {
+    position: relative;
+    display: flex;
+    bottom: 25rem;
+    margin-left: 10rem;
+    border-radius: 5rem;
+    height: auto;
+    width: 28%;
+    opacity: 0.8;
+
+  }
+  .logoDescription {
+    position: relative;
+    display: flex;
+    bottom: 23rem;
+    margin-left: 22.5rem;
+    color: $globalRoyalBlue;
+    letter-spacing: 4px;
+    font-size: 1.5rem;
+    overflow: auto;
+
+    .logoQuote {
+      color: $globalDarkBlue;
+       display: flex;
+       position: relative;
+       margin-left: 1.5rem;
+       height: auto;
+       justify-content: center;
+       width: 100%;
+       letter-spacing: 10px;
+       transition: all 3s ease;
+       animation: refresh 4s;
+       margin-top: 3rem;
+    }
+  }
+}
+
+
+
+@media (max-width: 580px) {
+  .brandLogo {
+    flex-direction: column;
+    display: flex;
+    width: auto;
+    height: 100%;
+    align-items: center;
+    overflow: auto;
+    margin-left: 80px;
+  }
+  .logoDescription {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: auto;
+    height: 100%;
+    align-self: center;
+    margin-left: 80px;
+    .logoQuote {
+      flex-direction: column;
+      display: flex;
+      width: auto;
+      height: 100%;
+      align-self: center;
+      align-items: flex-start;
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .brandLogo {
+    flex-direction: column;
+    display: flex;
+    width: auto;
+    height: 100%;
+    align-content: center;
+
+  }
+  .logoDescription {
+    margin-bottom: 2px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: auto;
+    height: 100%;
+    align-content: flex-start;
+    margin-top: 10px;
+
+    .logoQuote {
+      flex-direction: column;
+      display: flex;
+      width: auto;
+      height: 100%;
+      align-content: center;
+
+
+      align-items: flex-start;
+    }
+  }
+}
+@keyframes refresh {
+  from {
+    width: 100%;
+  }
+} to {
+  width: 80%;
+}
